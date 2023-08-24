@@ -18,5 +18,6 @@ namespace mf_api_web_services_fuel_manager.Models
         public int AnoFabricao { get; set; }
         [Required]
         public int AnoModelo { get; set; }
+        public ICollection<Consumo> Consumos { get; set; }
     }
 }

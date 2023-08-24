@@ -12,6 +12,7 @@ namespace mf_api_web_services_fuel_manager.Models
         [Required]
         public string Descricao { get; set; }
         [Required]
+        [Column(TypeName = "decimal(18,2)")]
         public DateTime Data { get; set; }
         [Required]
         public decimal Valor { get; set; }
