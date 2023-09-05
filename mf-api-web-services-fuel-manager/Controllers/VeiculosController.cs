@@ -38,7 +38,7 @@ namespace mf_api_web_services_fuel_manager.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id)
         {
-           var model = await _context.Veiculos
+           var model = await _context.Veiculos.Include(x => x.Consumos)
                 .FirstOrDefaultAsync(x => x.Id == id);
             if(model ==  null) return NotFound(new { message = "Veículo não encontrado" });
             return Ok(model);
